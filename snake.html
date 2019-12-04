@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/map.css">
+</head>
+<body>
+  
+</body>
+<script src="./js/Game.js"></script>
+<script src="./js/Map.js"></script>
+<script src="./js/Food.js"></script>
+<script src="./js/Snake.js"></script>
+<script src="./js/Block.js"></script>
+<script>
+    // 存储所有图片
+    var snakeObj = {
+        headArr:["./images/1.png","./images/2.png","./images/3.png","./images/4.png"],
+        bodyArr:["./images/5.png"],
+        tailArr:["./images/6.png","./images/7.png","./images/8.png","./images/9.png"]
+    }
+
+    // 实例化Map对象
+    var map = new Map(16,16);
+    // 实例化Food对象
+    var food = new Food(3,3,"./images/food.jpg");
+    // 实例化Snake对象
+    var snake = new Snake(snakeObj);
+    // 实例化障碍物对象
+    var block = new Block("./images/block.png");
+
+    // 实例化Game对象
+    var game  = new Game(map,food,snake,block);
+</script>
+</html>
